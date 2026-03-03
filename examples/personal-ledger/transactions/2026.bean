@@ -1,0 +1,18 @@
+; ======================
+; Current transactions 2026
+; ======================
+
+; Example 1: salary payment received
+2026-01-05 * "Company XYZ" "Monthly salary"
+  Assets:Bank:Checking:BRL                    10000 BRL
+  Income:Salary                              -10000 BRL
+
+; Example 2: card purchase (accrual)
+2026-01-10 * "Grocery Store" "Monthly card purchases"
+  Expenses:Food                                 350 BRL
+  Liabilities:CreditCard:Nubank                -350 BRL
+
+; Example 3: statement payment (cash)
+2026-01-20 * "Nubank" "Statement payment"
+  Liabilities:CreditCard:Nubank                 350 BRL
+  Assets:Bank:Checking:BRL                     -350 BRL

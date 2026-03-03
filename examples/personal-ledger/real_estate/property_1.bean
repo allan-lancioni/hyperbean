@@ -1,0 +1,18 @@
+; ======================
+; Real Estate: Property 1
+; ======================
+
+; Rent income
+2026-02-05 * "Tenant 1" "February rent"
+  Assets:Bank:Checking:BRL                      2500 BRL
+  Income:RealEstate:Rent:Property1            -2500 BRL
+
+; OPEX: condo fee
+2026-02-08 * "Condo" "Monthly fee"
+  Expenses:Housing:Condo:Property1:OPEX         700 BRL
+  Assets:Bank:Checking:BRL                      -700 BRL
+
+; CAPEX: renovation
+2026-02-20 * "Contractor" "Electrical renovation"
+  Assets:RealEstate:Property1:CAPEX            1200 BRL
+  Assets:Bank:Checking:BRL                     -1200 BRL

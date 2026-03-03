@@ -1,0 +1,13 @@
+; ======================
+; Investment operations
+; ======================
+
+; PETR4 purchase (placeholder)
+2026-02-01 * "BR Broker" "Buy PETR4"
+  Assets:Investments:BR:PETR4                     10 PETR4 {35 BRL}
+  Assets:Investments:BR:Brokerage              -350 BRL
+
+; AAPL purchase (placeholder)
+2026-02-10 * "US Broker" "Buy AAPL"
+  Assets:Investments:US:AAPL                       1 AAPL {180 USD}
+  Assets:Investments:US:Brokerage              -180 USD

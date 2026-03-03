@@ -1,0 +1,7 @@
+; ======================
+; Dividends and earnings
+; ======================
+
+2026-03-15 * "PETR4" "Dividend"
+  Assets:Investments:BR:Brokerage                25 BRL
+  Income:Investments:Dividends                  -25 BRL

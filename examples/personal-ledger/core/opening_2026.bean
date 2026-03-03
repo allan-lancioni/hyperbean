@@ -1,0 +1,9 @@
+2026-01-01 * "Opening balances 01/01/2026"
+  Assets:Cash:BRL                                0 BRL
+  Assets:Cash:USD                                0 USD
+  Assets:Bank:Checking:BRL                       0 BRL
+  Assets:Investments:BR:Brokerage                0 BRL
+  Assets:Investments:US:Brokerage                0 USD
+  Liabilities:CreditCard:Nubank                  0 BRL
+  Liabilities:Taxes:Payable                      0 BRL
+  Equity:OpeningBalances

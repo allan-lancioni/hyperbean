@@ -1,0 +1,4 @@
+option "title" "Finance - Personal Finances"
+option "operating_currency" "BRL"
+option "operating_currency" "USD"
+option "documents" "docs"

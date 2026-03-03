@@ -1,0 +1,51 @@
+{
+  "ledger": {
+    "language": "en-US",
+    "base_currency": "BRL",
+    "allowed_currencies": ["BRL", "USD"],
+    "date_format": "YYYY-MM-DD",
+    "commit_message_template": "{{date}} - {{short_description}}"
+  },
+
+  "accounts": {
+    "default_cash_account": "Assets:Bank:Checking",
+    "default_credit_card_account": "Liabilities:CreditCard:Primary",
+    "default_investment_account": "Assets:Brokerage:Primary",
+    "default_expense_account": "Expenses:Misc",
+    "default_income_account": "Income:General"
+  },
+
+  "credit_card": {
+    "mode": "accrual",
+    "auto_classify_installments": true
+  },
+
+  "real_estate": {
+    "separate_property_subledgers": true,
+    "capex_account_prefix": "Assets:RealEstate",
+    "opex_account_prefix": "Expenses:RealEstate"
+  },
+
+  "investments": {
+    "track_cost_basis": true,
+    "default_commodity_precision": 2,
+    "separate_dividends_account": true
+  },
+
+  "imports": {
+    "raw_directory": "imports/raw",
+    "processed_directory": "imports/processed",
+    "auto_generate_balanced_entries": true
+  },
+
+  "validation": {
+    "strict_mode": true,
+    "require_existing_accounts": true,
+    "disallow_implicit_account_creation": true
+  },
+
+  "fava": {
+    "host": "127.0.0.1",
+    "port": 5000
+  }
+}

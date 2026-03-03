@@ -1,0 +1,42 @@
+; ======================
+; Initial Chart of Accounts
+; ======================
+
+; Assets - Cash and liquidity
+1970-01-01 open Assets:Cash:BRL BRL
+1970-01-01 open Assets:Cash:USD USD
+1970-01-01 open Assets:Bank:Checking:BRL BRL
+
+; Assets - BR/US investments
+1970-01-01 open Assets:Investments:BR:Brokerage BRL
+1970-01-01 open Assets:Investments:BR:PETR4 PETR4
+1970-01-01 open Assets:Investments:BR:IVVB11 IVVB11
+1970-01-01 open Assets:Investments:US:Brokerage USD
+1970-01-01 open Assets:Investments:US:AAPL AAPL
+
+; Assets - Real estate (sub-accounting per asset)
+1970-01-01 open Assets:RealEstate:Property1 BRL
+1970-01-01 open Assets:RealEstate:Property1:CAPEX BRL
+
+; Liabilities - Card and taxes
+1970-01-01 open Liabilities:CreditCard:Nubank BRL
+1970-01-01 open Liabilities:Taxes:Payable BRL
+
+; Equity
+1970-01-01 open Equity:OpeningBalances
+1970-01-01 open Equity:Adjustments
+
+; Income
+1970-01-01 open Income:Salary BRL
+1970-01-01 open Income:Investments:Dividends BRL
+1970-01-01 open Income:RealEstate:Rent:Property1 BRL
+
+; Expenses - General
+1970-01-01 open Expenses:Food BRL
+1970-01-01 open Expenses:Housing:Condo:Property1:OPEX BRL
+1970-01-01 open Expenses:CreditCard:AnnualFee BRL
+1970-01-01 open Expenses:Taxes BRL
+; Conventions:
+; - Accrual card accounting: expense at purchase time against Liabilities:CreditCard:*.
+; - Cash accounting: settlement occurs when paying the statement (reduces cash and liability).
+; - Real estate: OPEX in Expenses:Housing:* and CAPEX in Assets:RealEstate:*:CAPEX.

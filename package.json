@@ -1,0 +1,33 @@
+{
+  "name": "finance",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first finance infrastructure with Beancount + Node/TypeScript",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "npm install && npm run setup:py",
+    "setup:py": "npx tsx packages/core/setup-python.ts",
+    "validate": "npx tsx packages/core/validate.ts",
+    "validate:watch": "npx tsx packages/core/validate.ts --watch",
+    "fava": "npx tsx packages/core/py.ts fava --host 127.0.0.1 --port 5000",
+    "dev": "concurrently \"npm run validate:watch\" \"npm run fava\"",
+    "start": "npm run dev",
+    "import:nubank": "npx tsx packages/importers/import-nubank.ts",
+    "import:b3": "npx tsx packages/importers/import-b3.ts",
+    "reports": "npx tsx packages/reports/reports.ts",
+    "networth": "npx tsx packages/reports/networth.ts",
+    "irr": "npx tsx packages/reports/irr.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "precommit": "npm run validate"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "concurrently": "^9.2.1",
+    "vitest": "^3.2.4",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0"
+  }
+}
